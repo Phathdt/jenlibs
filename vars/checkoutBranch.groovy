@@ -2,16 +2,10 @@ def call(branch) {
   pipeline {
     agent any
     stages {
-      stage('pull code') {
-        steps {
-          sh 'ls -l'
-          sh 'pwd'
-        }
-      }
-
       stage('Checkout branch') {
         steps {
-          echo "Hello, ${branch}."
+          sh 'cd /var/lib/jenkins/source_code'
+          sh "git checkout ${branch}"
         }
       }
     }
