@@ -4,8 +4,8 @@ def call(branch) {
     stages {
       stage('pull code') {
         steps {
-          echo 'ls -l'
-          echo 'pwd'
+          sh 'ls -l'
+          sh 'pwd'
         }
       }
 
