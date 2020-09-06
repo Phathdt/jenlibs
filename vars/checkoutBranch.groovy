@@ -4,7 +4,7 @@ def call(String repo_url, String branch) {
     stages {
       stage('pull repo_url') {
         steps {
-          echo ${ repo_url }
+          echo $repo_url
 
           sh '''
             rm -rf source_code
