@@ -8,7 +8,7 @@ pipeline{
     }
 
     stages{
-        stage("A"){
+        stage("clone source code"){
             steps{
                 git branch: BRANCH,
                     url: checkoutBranch("https://github.com/Phathdt/express-boilerplate")
