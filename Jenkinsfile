@@ -11,10 +11,15 @@ pipeline{
     stages{
         stage("A"){
             steps{
-                sh "rm -rf *"
-                sh "git clone ${checkoutBranch(REPO_URL)} source_code"
+                // sh "rm -rf *"
+                // sh "git clone ${checkoutBranch(REPO_URL)} source_code"
 
-                sh "cd source_code && git checkout ${BRANCH}"
+                // sh "cd source_code && git checkout ${BRANCH}"
+
+                git branch: BRANCH,
+                    url: REPO_URL
+
+                // sh "ls -lat"
             }
         }
     }
