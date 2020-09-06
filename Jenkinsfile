@@ -14,5 +14,11 @@ pipeline{
                     url: checkoutBranch("https://github.com/Phathdt/express-boilerplate")
             }
         }
+
+        stage("send mail"){
+            steps{
+                sendEmail currentBuild, ['phathdt379@gmail.com']
+            }
+        }
     }
 }
