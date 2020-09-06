@@ -4,7 +4,7 @@ pipeline{
     agent any
 
     environment {
-        REPO_URL = "https://github.com/Phathdt/express-boilerplate"
+        //REPO_URL = "https://github.com/Phathdt/express-boilerplate"
         BRANCH = "master"
     }
 
@@ -17,7 +17,7 @@ pipeline{
                 // sh "cd source_code && git checkout ${BRANCH}"
 
                 git branch: BRANCH,
-                    url: REPO_URL
+                    url: checkoutBranch("https://github.com/Phathdt/express-boilerplate")
 
                 // sh "ls -lat"
             }
