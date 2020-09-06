@@ -20,7 +20,7 @@ pipeline{
 
         stage("send mail"){
             steps{
-                sendEmail currentBuild, ['phathdt379@gmail.com']
+                sendEmail(currentBuild, ['phathdt379@gmail.com'])
             }
         }
     }
