@@ -1,3 +1,6 @@
+import hudson.model.Result
+import org.jenkinsci.plugins.workflow.support.steps.build.RunWrapper
+
 def call(RunWrapper currentBuild, List<String> emailList) {
     if (!emailList) {
         return
