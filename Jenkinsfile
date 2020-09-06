@@ -7,7 +7,6 @@ pipeline{
 
     libraries {
         lib('github.com/cfpb/jenkins-shared-libraries')
-        lib('github.com/Phathdt/jenlibs')
     }
 
     stages{
