@@ -7,25 +7,20 @@ pipeline{
 
     libraries {
         lib('github.com/cfpb/jenkins-shared-libraries@main')
+        lib('github.com/Phathdt/jenlibs')
     }
 
     stages{
-        // stage("clone source code"){
-        //     steps{
-        //         git branch: BRANCH,
-        //             url: checkoutBranch("https://github.com/Phathdt/express-boilerplate")
-        //     }
-        // }
-
-        // stage("send mail"){
-        //     steps{
-        //         sendEmail(currentBuild, ['phathdt379@gmail.com'])
-        //     }
-        // }
-
-        stage("Echo"){
+        stage("clone source code"){
             steps{
-                echo "====++++executing Echo++++===="
+                git branch: BRANCH,
+                    url: checkoutBranch("https://github.com/Phathdt/express-boilerplate")
+            }
+        }
+
+        stage("send mail"){
+            steps{
+                sendEmail(currentBuild, ['phathdt379@gmail.com'])
             }
         }
     }
