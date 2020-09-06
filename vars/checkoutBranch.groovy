@@ -1,9 +1,11 @@
-def call(repo_url, branch) {
+def call(String repo_url, String branch) {
   pipeline {
     agent any
     stages {
       stage('pull repo_url') {
         steps {
+          echo ${ repo_url }
+
           sh '''
             rm -rf source_code
             git clone ${repo_url} source_code
