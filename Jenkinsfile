@@ -1,5 +1,3 @@
-@Library('jenlibs@master') _
-
 pipeline{
     agent any
 
